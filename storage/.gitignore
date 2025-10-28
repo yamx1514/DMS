@@ -1,0 +1,3 @@
+# Ignore stored binary artifacts but keep the folder structure.
+*
+!.gitignore

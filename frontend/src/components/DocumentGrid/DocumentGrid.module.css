@@ -1,0 +1,164 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 1.5rem;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.heading {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.folderPicker {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.select {
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.5rem;
+  border: 1px solid #d1d5db;
+  background: #ffffff;
+  font-size: 0.95rem;
+}
+
+.grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.75rem;
+  padding: 1rem;
+  background: #ffffff;
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.05);
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.icon {
+  font-size: 1.5rem;
+}
+
+.title {
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.cardBody {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  flex: 1;
+}
+
+.cardFooter {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.cardButton {
+  flex: 1;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.5rem;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.previewButton {
+  background: #eef2ff;
+  color: #4338ca;
+}
+
+.downloadButton {
+  background: #dbeafe;
+  color: #1d4ed8;
+}
+
+.metaRow {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  color: #4b5563;
+}
+
+.visibilityPicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.metaLabel {
+  font-weight: 600;
+}
+
+.metaValue {
+  font-style: italic;
+}
+
+.description {
+  margin: 0;
+  color: #1f2937;
+  font-size: 0.9rem;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.2rem 0.65rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.visibility_public {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+.visibility_restricted {
+  background: #fef3c7;
+  color: #b45309;
+}
+
+.visibility_account_specific {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+.placeholder {
+  border: 1px dashed #d1d5db;
+  padding: 1.25rem;
+  border-radius: 0.75rem;
+  text-align: center;
+  color: #6b7280;
+  font-style: italic;
+}
+
+.error {
+  color: #dc2626;
+  border-color: #fecaca;
+  background: #fef2f2;
+}
