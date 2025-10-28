@@ -1,0 +1,93 @@
+.container {
+  display: grid;
+  gap: 0.75rem;
+  padding: 1rem;
+  border: 1px solid #d0d7de;
+  border-radius: 0.75rem;
+  background: #ffffff;
+  max-width: 720px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.field input,
+.field select {
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.5rem;
+  border: 1px solid #c4c4c4;
+  font-size: 1rem;
+}
+
+.label {
+  font-weight: 600;
+  font-size: 0.85rem;
+  color: #363636;
+}
+
+.suggestions {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.suggestions li button {
+  border: 1px solid #d0d7de;
+  border-radius: 999px;
+  padding: 0.35rem 0.75rem;
+  background: #f4f6fb;
+  cursor: pointer;
+}
+
+.selectedTags {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.tagChip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.35rem 0.6rem;
+  border-radius: 999px;
+  background-color: #e7ecff;
+}
+
+.tagChip button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.filtersRow {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 0.75rem;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.actions button {
+  padding: 0.6rem 1.2rem;
+  border-radius: 0.5rem;
+  background: #0b5fff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.error {
+  color: #b42318;
+  font-size: 0.85rem;
+}
