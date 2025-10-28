@@ -1,5 +1,6 @@
 import { PropsWithChildren, ReactNode, useMemo, useState } from "react";
 import { Outlet } from "react-router-dom";
+
 import Breadcrumbs from "../components/Breadcrumbs";
 
 type MainLayoutProps = PropsWithChildren<{
@@ -71,23 +72,23 @@ const MainLayout = ({
           )}
         </header>
 
-        <div className="relative flex flex-1 overflow-hidden">
+        <div className="relative flex flex-1 overflow-hidden lg:grid lg:grid-cols-[18rem_minmax(0,1fr)]">
           {hasSidebar && (
             <>
-              <aside className="hidden w-72 shrink-0 border-r border-gray-200 bg-white p-4 dark:border-gray-800 dark:bg-gray-900 lg:block">
-                <div className="flex h-full flex-col gap-4 overflow-y-auto pr-2">
-                  {sidebar}
+              <aside className="hidden h-full shrink-0 border-r border-gray-200 bg-white/90 px-4 py-6 dark:border-gray-800 dark:bg-gray-900/90 lg:flex lg:flex-col">
+                <div className="flex-1 overflow-y-auto pr-2">
+                  <div className="flex flex-col gap-4">{sidebar}</div>
                 </div>
               </aside>
 
               {isSidebarOpen && (
                 <div className="fixed inset-0 z-40 lg:hidden" role="dialog" aria-modal="true">
                   <div
-                    className="absolute inset-0 bg-gray-900/50"
+                    className="absolute inset-0 bg-gray-900/60 backdrop-blur-sm"
                     onClick={() => setIsSidebarOpen(false)}
                     aria-hidden="true"
                   />
-                  <div className="relative flex h-full w-72 flex-col border-r border-gray-200 bg-white p-4 shadow-xl dark:border-gray-800 dark:bg-gray-900">
+                  <div className="relative flex h-full w-72 flex-col border-r border-gray-200 bg-white px-4 py-6 shadow-xl dark:border-gray-800 dark:bg-gray-900">
                     <button
                       type="button"
                       className="absolute right-3 top-3 inline-flex items-center justify-center rounded-md p-2 text-gray-600 transition hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-indigo-500 dark:text-gray-300 dark:hover:bg-gray-800"
@@ -105,15 +106,21 @@ const MainLayout = ({
                         <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
                       </svg>
                     </button>
-                    <div className="mt-8 flex flex-col gap-4 overflow-y-auto pr-2">{sidebar}</div>
+                    <div className="mt-8 flex-1 overflow-y-auto pr-1">
+                      <div className="flex flex-col gap-4">{sidebar}</div>
+                    </div>
                   </div>
                 </div>
               )}
             </>
           )}
 
-          <main className="flex-1 overflow-y-auto bg-gray-50 p-4 transition-colors duration-200 dark:bg-gray-950">
-            <div className="mx-auto flex w-full max-w-6xl flex-col gap-4 pb-10">{content}</div>
+          <main className="flex min-w-0 flex-1 flex-col overflow-hidden bg-gray-50 transition-colors duration-200 dark:bg-gray-950">
+            <div className="flex-1 overflow-y-auto">
+              <div className="mx-auto w-full max-w-6xl p-4 pb-10 lg:p-6">
+                <div className="flex flex-col gap-4">{content}</div>
+              </div>
+            </div>
           </main>
         </div>
       </div>
